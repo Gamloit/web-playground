@@ -1,5 +1,8 @@
 /*
-TODO: Chat with Ryan about the box model
+Specificity, low to high:
+- Elements (h1, p, ul, etc.) - specificity points: 1
+- Classes (.my-class, .another-class, etc.) - specificity points: 10
+- IDs (#header, #another-unique-element) - specificity points: 100
 */
 *,
 *::before,
@@ -7,26 +10,60 @@ TODO: Chat with Ryan about the box model
     box-sizing: border-box;
 }
 
-h1{
-
-    color: coral;
-    font-family: fantasy;
-    font-size: larger;
-}
-
-h2{
-    color: deeppink;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: xx-large;
-    font-weight: 900;
-    margin-right: initial;
-
-}
-
 body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #000000;
     color: #ffffff;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
-    font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: coral;
+}
+
+h2 {
+    font-size: 40px;
+    color: deeppink;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+.outlined-content {
+    border: 1px outset red;
+    color: green;
+    margin: auto;
+    width: 50%;
+}
+
+.box-model {
+    outline: 1px dashed pink;
+    border: 10px solid red;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    width: 500px;
 }
